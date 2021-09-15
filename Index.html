@@ -21,8 +21,8 @@
                     <input type="text" id="email" name="email"><br></li>
                 </ul>
             </form>
-            <h2>Where have you spotted this ghost?</h2>
             <form class="formbuilding">
+            <h2>Where have you spotted this ghost?</h2>
                 <ul>
                     <li><input type="radio" id="minne" name="sighting" value="minne">
                     <label for="minne">Minné Hall</label><br></li>
@@ -48,7 +48,38 @@
                     <label for="commons">Kryzsko Commons</label><br></li>
                 </ul>
             </form>
-            <h2></h2>
+            <form class="interaction">
+            <h2>Describe the interaction</h2>
+                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+            </form>
+            <form class="violence">
+            <h2>Was the ghost violent</h2>
+                <ul>
+                    <li><input type="radio" id="yes" name="violence" value="yes">
+                    <label for="yes">Yes</label><br></li>
+                    <li><input type="radio" id="no" name="violence" value="no">
+                    <label for="no">No</label><br></li>
+                </ul>
+            </form>  
+            <form class="appearance">
+            <h2>In your best detail, describe the appearance of the ghost.</h2>
+                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+            </form>
+            <form class="sound">
+                <h2>Did the ghost make any sounds?</h2>
+                    <ul>
+                        <li><input type="radio" id="yes" name="sound" value="yes">
+                        <label for="yes">Yes</label><br></li>
+                        <li><input type="radio" id="no" name="sound" value="no">
+                        <label for="no">No</label><br></li>
+                    </ul>
+                <h2>If yes, what did it sound like?</h2>
+                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+            </form>
+            
+            <form method="POST" action="submission.html">
+                <input type="submit" value="Submit">
+            </form>
     </div>
 </body>
 </html>
