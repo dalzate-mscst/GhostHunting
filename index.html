@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ghost Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ghost Survey</h1>
+        <form method="post" action="submission.html">
+            <div class="formname">
+                <ul>
+                    <li><label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br></li>
+                    <li><label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"></li>
+                    <li><label for="email"> Warrior Email:</label><br>
+                    <input type="text" id="email" name="email"><br></li>
+                </ul>
+            </div>
+            <div class="formbuilding">
+                <h2>Where have you spotted this ghost?</h2>
+                <ul>
+                    <li><input type="radio" id="minne" name="sighting" value="minne">
+                    <label for="minne">Minné Hall</label><br></li>
+                    <li><input type="radio" id="library" name="sighting" value="library">
+                    <label for="library">Darrel W. Krueger Library</label><br></li>
+                    <li><input type="radio" id="somsen" name="sighting" value="somsen">
+                    <label for="somsen">Somsen Hall</label></li>
+                    <li><input type="radio" id="phelps" name="sighting" value="phelps">
+                    <label for="phelps">Phelps Hall</label><br></li>
+                    <li><input type="radio" id="pac" name="sighting" value="pac">
+                    <label for="pac">Performing Arts Center</label><br></li>
+                    <li><input type="radio" id="maxwell" name="sighting" value="maxwell">
+                    <label for="maxwell">Maxwell Hall</label><br></li>
+                    <li><input type="radio" id="stark" name="sighting" value="stark">
+                    <label for="stark">Stark Hall</label><br></li>
+                    <li><input type="radio" id="pasteur" name="sighting" value="pasteur">
+                    <label for="pasteur">Pasteur Hall</label><br></li>
+                    <li><input type="radio" id="memorial" name="sighting" value="memorial">
+                    <label for="memorial">Memorial Hall</label><br></li>
+                    <li><input type="radio" id="gildemeister" name="sighting" value="gildemeister">
+                    <label for="gildemeister">Gildemeister Hall</label><br></li>
+                    <li><input type="radio" id="commons" name="sighting" value="commons">
+                    <label for="commons">Kryzsko Commons</label><br></li>
+                </ul>
+            </div>
+            <div class="interaction">
+                <h2>Describe the interaction</h2>
+                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+            </div>
+            <div class="violence">
+                <h2>Was the ghost violent</h2>
+                <ul>
+                    <li><input type="radio" id="yes" name="violence" value="yes">
+                    <label for="yes">Yes</label><br></li>
+                    <li><input type="radio" id="no" name="violence" value="no">
+                    <label for="no">No</label><br></li>
+                </ul>
+            </div>  
+            <div class="appearance">
+                <h2>In your best detail, describe the appearance of the ghost.</h2>
+                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+            </div>
+            <div class="sound">
+                <h2>Did the ghost make any sounds?</h2>
+                    <ul>
+                        <li><input type="radio" id="yes" name="sound" value="yes">
+                        <label for="yes">Yes</label><br></li>
+                        <li><input type="radio" id="no" name="sound" value="no">
+                        <label for="no">No</label><br></li>
+                    </ul>
+                <h2>If yes, what did it sound like?</h2>
+                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+            </div>
+            
+                <input type="submit">
+            
+        </form>
+    </div>
+    <script>
+        function myfunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.classname === "topnav") {
+                x.classname += " responsive";
+            } else {
+                x.classname ="topnav";
+            }
+        }
+        </script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+        <script>
+            'undefined' === typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && 
+            (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'})
+            ,_trfd.push({'ap':'cpsh'}, {'server':'p3plcpn10817'})
+        </script>
+        <script>src="https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js"</script>
+</body>
+</body>
+</html>

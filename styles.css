@@ -7,6 +7,11 @@
     font-family: header;
     src: url(fonts/OpenSans-Bold.ttf);
 }
+
+label {
+font-size: 0.75em;
+}
+
 .header {
     mix-blend-mode: normal;
     background-color: #3b3b3b;
@@ -35,7 +40,22 @@ main {
     flex-direction: column;
 }
 
-.h2 {
+.container h2 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+    font-size: 0.90em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  
+  h1 {
     text-align: center;
     display: block;
     font-size: 1.5em;
@@ -45,7 +65,7 @@ main {
     margin-inline-end: 0px;
     font-weight: bold;
   }
-  
+
 body {
     font-family: header;
     position:relative;
@@ -59,8 +79,6 @@ body {
 
 .container {
     background-color: #b3b3b3;
-    display: -webkit-box;
-    display: -ms-grid;
     display: block;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -68,12 +86,15 @@ body {
     -ms-flex-align: center;
     align-items: center;
     overflow: hidden;
+    margin: 0 auto;
+    padding: 0 auto;
   }
 
 .container .formbuilding {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    text-align: left;
+    display: block;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-flex: 1;
@@ -83,14 +104,21 @@ body {
   }
 
 .formname {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 3fr;
+    text-align: center;
 }
 
 .formbuilding .sightings {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 3fr;
     list-style: none;
+    margin: auto;
+    padding: auto;
+}
+
+br {
+    text-align: center;
 }
 
 .container .formbuilding ul {
@@ -100,27 +128,32 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 15%;
+    padding: 0 10%;
     transition: all 0.3s ease 0s;
+
 }
 
 .container .formbuilding ul li a {
     text-decoration: none;
     color: #999999;
-    font-size: 14px;
+    font-size: 0.75em;
     text-transform: uppercase;
     display: block;
     height: 60px;
     line-height: 60px;
     cursor: pointer;
+    margin: 0 10px;
     padding: 0 10px;
     transition: all 0.3s ease 0s;
 }
+
 .container .formname ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: block;
+    text-align: center;
+    align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style: none;
@@ -132,7 +165,9 @@ body {
 .container .formname ul li a {
     text-decoration: none;
     color: #999999;
-    font-size: 14px;
+    font-size: 0.75;
+    text-align: center;
+    align-items: center;
     text-transform: uppercase;
     display: block;
     height: 60px;
@@ -140,4 +175,77 @@ body {
     cursor: pointer;
     padding: 0 10px;
     transition: all 0.3s ease 0s;
+}
+
+.container .violence ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.container .violence ul li a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: all 0.3s ease 0s;
+}
+
+div .container a {
+    align-items: center;
+    align-content: center;
+    display: block;
+
+}
+form {
+    align-content: center;
+    -ms-grid-column-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.container .sound ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.container .sound ul li a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: all 0.3s ease 0s;
+}
+
+form textarea {
+    width: 90%;
 }
