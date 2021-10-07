@@ -9,15 +9,14 @@
     <title>Ghost Survey</title>
 </head>
 <body>
+    <section>
     <div class="container">
         <h1>Ghost Survey</h1>
-        <form method="post" action="submission.html">
+        <form method="post" id="my-form" action="https://formspree.io/f/myylvney">
             <div class="formname">
                 <ul>
-                    <li><label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname"><br></li>
-                    <li><label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname"></li>
+                    <li><label for="name">First & Last Name:</label><br>
+                    <input type="text" id="name" name="name"><br></li>
                     <li><label for="email"> Warrior Email:</label><br>
                     <input type="text" id="email" name="email"><br></li>
                 </ul>
@@ -77,13 +76,32 @@
                 <h2>If yes, what did it sound like?</h2>
                 <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
             </div>
-            
-                <a href="submission.html"><input type="submit"></a>
-            
+                <button type="submit">Submit</button>
         </form>
     </div>
-
-
-</body>
+        <div id="status" class="success"></div>
+</section>
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 </body>
 </html>

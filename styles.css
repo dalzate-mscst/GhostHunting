@@ -246,6 +246,59 @@ form {
     transition: all 0.3s ease 0s;
 }
 
+section {
+    flex-direction: column;
+}
+
 form textarea {
     width: 90%;
+}
+
+button[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 0.75em;
+    border-radius: 8px;
+    font-family: 'Motserrat';
+    color: #3b3b3b;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .3 ease background-color;
+}
+button[type="submit"]:hover {
+    background-color: darkgray;
+}
+#status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+#status.success {
+    background-color: greenyellow;
+    animation: status 4s ease forwards;
+}
+#status.error {
+    background-color: red;
+    color: white;
+    animation: status 4s ease forwards;
+}
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
