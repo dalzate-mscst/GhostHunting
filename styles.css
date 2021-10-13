@@ -71,6 +71,7 @@ body {
     position:relative;
     margin: 0;
     padding: 0;
+    background-color: #b3b3b3;
 }
 
 .grid-container {
@@ -269,7 +270,7 @@ button[type="submit"]{
     transition: .3 ease background-color;
 }
 button[type="submit"]:hover {
-    background-color: darkgray;
+    background-color: skyblue;
 }
 #status {
     width: 90%;

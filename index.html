@@ -15,7 +15,7 @@
         <form method="post" id="my-form" action="https://formspree.io/f/myylvney">
             <div class="formname">
                 <ul>
-                    <li><label for="name">First & Last Name:</label><br>
+                    <li><label for="name">Full Name:</label><br>
                     <input type="text" id="name" name="name"><br></li>
                     <li><label for="email"> Warrior Email:</label><br>
                     <input type="text" id="email" name="email"><br></li>
@@ -50,7 +50,7 @@
             </div>
             <div class="interaction">
                 <h2>Describe the interaction</h2>
-                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+                <textarea id="interaction" name="interaction" rows="4" cols="50"></textarea>
             </div>
             <div class="violence">
                 <h2>Was the ghost violent</h2>
@@ -63,7 +63,7 @@
             </div>  
             <div class="appearance">
                 <h2>In your best detail, describe the appearance of the ghost.</h2>
-                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+                <textarea id="appearance" name="appearance" rows="4" cols="50"></textarea>
             </div>
             <div class="sound">
                 <h2>Did the ghost make any sounds?</h2>
@@ -74,12 +74,12 @@
                         <label for="no">No</label><br></li>
                     </ul>
                 <h2>If yes, what did it sound like?</h2>
-                <textarea id="describe" name="describe" rows="4" cols="50"></textarea>
+                <textarea id="sound" name="sound" rows="4" cols="50"></textarea>
             </div>
                 <button type="submit">Submit</button>
         </form>
     </div>
-        <div id="status" class="success"></div>
+        <div id="status" class="success">success</div>
 </section>
 <script>
     var form = document.getElementById("my-form");
